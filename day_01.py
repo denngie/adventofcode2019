@@ -6,7 +6,7 @@ def calculate_fuel(mass, recursive=False):
     ''' Calculate fuel required to launch rocket (recursion is part two) '''
     fuel = floor(mass / 3) - 2
     if fuel > 8 and recursive:
-        fuel = fuel + calculate_fuel(fuel, recursive)
+        fuel += calculate_fuel(fuel, recursive)
     return fuel
 
 
